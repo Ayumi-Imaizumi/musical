@@ -1,0 +1,16 @@
+current directory: /Users/ayumi/railsgirls/musical/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/Users/ayumi/.rbenv/versions/2.2.1/bin/ruby -r ./siteconf20160814-5077-le7u4e.rb extconf.rb 
+
+current directory: /Users/ayumi/railsgirls/musical/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/ayumi/railsgirls/musical/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/ayumi/railsgirls/musical/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

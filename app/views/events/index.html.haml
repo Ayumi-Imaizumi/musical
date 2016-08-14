@@ -1,0 +1,6 @@
+%h1 ミュージカル一覧
+%ul
+  - @events.each do |event|
+    %li
+      = image_tag "event1.jpg", size: "100x80"
+      = link_to event.title, event_path(event.id)
