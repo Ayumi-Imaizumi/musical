@@ -5,6 +5,10 @@ gem 'erb2haml'
 gem 'devise'
 gem 'rails_admin'
 
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
