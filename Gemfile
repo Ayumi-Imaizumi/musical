@@ -9,6 +9,9 @@ gem 'rails_admin'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 
+# web server
+gem 'puma'
+
 # DB
 group :development do
   gem 'sqlite3'
