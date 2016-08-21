@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :viewing_logs
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   def self.find_for_oauth(auth)

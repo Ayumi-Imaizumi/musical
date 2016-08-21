@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :admin_users
   resources :events
+  resources :titles
+  resources :viewing_logs
 
   get "home", to: "events#index", as: "user_root"
 
-  root 'events#index'
+  root 'titles#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

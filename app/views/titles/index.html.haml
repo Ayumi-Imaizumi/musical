@@ -1,0 +1,6 @@
+%h1 ミュージカル一覧
+%ul
+  - @titles.each do |title|
+    %li
+      = image_tag "title#{title.id}.jpg", size: "100x80"
+      = link_to title.name, title_path(title.id)
