@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :events
   resources :titles
   resources :viewing_logs
+  resources :theaters
 
   get "home", to: "events#index", as: "user_root"
 

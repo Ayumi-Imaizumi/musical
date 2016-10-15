@@ -1,4 +1,7 @@
 %h1 観劇履歴
+
 %ul
   - @viewing_logs.each do |log|
-    %li #{log.event.title.name}(#{log.event.play_at})
+    %li
+      = link_to log.event.title.name, event_path(log.event.id)
+      (#{log.event.play_at})#{log.event.theater.name}
