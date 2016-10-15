@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821064636) do
+ActiveRecord::Schema.define(version: 20161015062918) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",               default: "", null: false
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160821064636) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "play_at"
+    t.integer  "theater_id"
   end
 
   create_table "models", force: :cascade do |t|
@@ -52,6 +53,13 @@ ActiveRecord::Schema.define(version: 20160821064636) do
 
   add_index "models", ["email"], name: "index_models_on_email", unique: true
   add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
+
+  create_table "theaters", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.text     "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "titles", force: :cascade do |t|
     t.string   "name"

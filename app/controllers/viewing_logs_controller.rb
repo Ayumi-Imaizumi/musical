@@ -1,7 +1,7 @@
 class ViewingLogsController < ApplicationController
 
   def index
-    @viewing_logs = ViewingLog.where(user:current_user)
+    @viewing_logs = ViewingLog.includes(:event).where(user:current_user).order("events.play_at DESC")
   end
 
   def show

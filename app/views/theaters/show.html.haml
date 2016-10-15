@@ -1,0 +1,12 @@
+%h1= @theater.name
+
+%p= @theater.address
+
+%ul
+  - @theater.events.each do |event|
+    %li
+      = link_to "#{event.title} #{event.play_at}", event_path(event.id)
+
+%p
+  = link_to theaters_path do
+    劇場一覧に戻る

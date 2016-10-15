@@ -4,3 +4,7 @@
     %li
       = image_tag "title#{title.id}.jpg", size: "100x80"
       = link_to title.name, title_path(title.id)
+
+%p
+  = link_to theaters_path do
+    劇場一覧へ
