@@ -1,0 +1,5 @@
+%h1 俳優一覧
+%ul
+  - @actors.each do |actor|
+    %li
+      = link_to actor.name, actor_path(actor.id)

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015062918) do
+ActiveRecord::Schema.define(version: 20161015084020) do
+
+  create_table "actors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "furigana"
+    t.integer  "sex"
+    t.integer  "age"
+    t.date     "birthday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "recital"
+  end
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",               default: "", null: false
@@ -34,6 +45,7 @@ ActiveRecord::Schema.define(version: 20161015062918) do
     t.datetime "updated_at", null: false
     t.datetime "play_at"
     t.integer  "theater_id"
+    t.integer  "actor_id"
   end
 
   create_table "models", force: :cascade do |t|
