@@ -32,6 +32,14 @@
     %td
       %p= @actor.recital
 
+%h2 出演一覧
+%ul
+  - @actor.events.each do |event|
+    %li
+      = link_to event.play_at, event_path(event.id)
+      = event.theater.name
+
+
 %p
   = link_to actors_path do
     俳優一覧に戻る
