@@ -3,7 +3,8 @@ class Event < ActiveRecord::Base
   has_many :viewing_logs
   has_many :users, through: :viewing_logs
   belongs_to :theater
-  has_many :actors
+  has_many :actors, through: :actor_events
+  has_many :actor_events
 
   def to_s
     "#{self.title.name}(#{self.play_at})"
