@@ -5,3 +5,7 @@
     %li
       = link_to log.event.title.name, event_path(log.event.id)
       (#{log.event.play_at})#{log.event.theater.name}
+      %ul
+        - log.event.actors.each do |actor|
+          %li
+            = link_to actor.name, actor_path(actor.id)

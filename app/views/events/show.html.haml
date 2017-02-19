@@ -1,3 +1,8 @@
 %h1= @event.title
 %p= @event.play_at
 %p= @event.theater.name
+
+%ul
+  - @event.actors.each do |actor|
+    %li
+      = link_to actor.name, actor_path(actor.id)

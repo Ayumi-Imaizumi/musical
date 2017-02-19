@@ -1,0 +1,45 @@
+%h1= @actor.name
+
+%table
+  %tr
+    %th
+      名前
+    %td
+      %p= @actor.name
+  %tr
+    %th
+      ふりがな
+    %td
+      %p= @actor.furigana
+  %tr
+    %th
+      性別
+    %td
+      %p= @actor.sex
+  %tr
+    %th
+      年齢
+    %td
+      %p= @actor.age
+  %tr
+    %th
+      誕生日
+    %td
+      %p= @actor.birthday
+  %tr
+    %th
+      その他
+    %td
+      %p= @actor.recital
+
+%h2 出演一覧
+%ul
+  - @actor.events.each do |event|
+    %li
+      = link_to event.play_at, event_path(event.id)
+      = event.theater.name
+
+
+%p
+  = link_to actors_path do
+    俳優一覧に戻る
