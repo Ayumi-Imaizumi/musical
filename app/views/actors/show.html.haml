@@ -37,6 +37,7 @@
   - @actor.events.each do |event|
     %li
       = link_to event.play_at, event_path(event.id)
+      = event.title.name
       = event.theater.name
 
 

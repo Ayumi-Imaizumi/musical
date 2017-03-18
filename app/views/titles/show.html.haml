@@ -7,3 +7,9 @@
       = link_to "[観劇記録を付ける]", new_viewing_log_path+"?event_id=#{event.id}"
       - if @errors[event.id]
         = @errors[event.id].messages[:event_id].first
+
+%h2 配役一覧
+%ul
+  - @title.parts.each do |part|
+    %li
+      = part.name

@@ -5,4 +5,5 @@
 %ul
   - @event.actors.each do |actor|
     %li
+      = Part.where("actor_id=? and event_id=?",actor.id, @event.id).try(:first).try(:name)
       = link_to actor.name, actor_path(actor.id)
