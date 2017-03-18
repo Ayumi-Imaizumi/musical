@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170219043448) do
+ActiveRecord::Schema.define(version: 20170318070930) do
 
   create_table "actor_events", force: :cascade do |t|
     t.integer  "actor_id"
     t.integer  "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "part_id"
   end
 
   create_table "actors", force: :cascade do |t|
@@ -72,6 +73,15 @@ ActiveRecord::Schema.define(version: 20170219043448) do
 
   add_index "models", ["email"], name: "index_models_on_email", unique: true
   add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
+
+  create_table "parts", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "title_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "actor_id"
+    t.integer  "event_id"
+  end
 
   create_table "theaters", force: :cascade do |t|
     t.string   "name",       null: false
