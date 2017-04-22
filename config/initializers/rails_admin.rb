@@ -34,4 +34,29 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Event' do
+    list do
+      field :schedule_name
+    end
+    object_label_method do
+      :schedule_name
+    end
+  end
+  config.model 'ActorEvent' do
+    list do
+      field :actor
+      field :schedule_name do
+        formatted_value do
+          bindings[:object].event
+        end
+      end
+      field :part
+    end
+    edit do
+      field :actor
+      field :event
+      field :part
+    end
+  end
 end

@@ -7,6 +7,10 @@ class Event < ActiveRecord::Base
   has_many :actor_events
 
   def to_s
-    "#{self.title.name}(#{self.play_at})"
+    "#{title.name}(#{play_at.strftime("%Y年#{play_at.month}月%d日（#{%w(日 月 火 水 木 金 土)[play_at.wday]}）")}@#{theater.name})"
+  end
+
+  def schedule_name
+    "#{title.name}(#{play_at.strftime("%Y年#{play_at.month}月%d日（#{%w(日 月 火 水 木 金 土)[play_at.wday]}）")}@#{theater.name})"
   end
 end
