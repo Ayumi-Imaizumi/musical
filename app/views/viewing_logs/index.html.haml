@@ -3,8 +3,8 @@
 %ul
   - @viewing_logs.each do |log|
     %li
-      = link_to log.event.title.name, event_path(log.event.id)
-      (#{log.event.play_at})#{log.event.theater.name}
+      = link_to log.event.schedule_name, event_path(log.event.id)
+      -# (#{log.event.play_at})#{log.event.theater.name}
       %ul
         - log.event.actors.each do |actor|
           %li
