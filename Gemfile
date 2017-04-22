@@ -4,8 +4,8 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'devise'
 gem 'rails_admin'
+gem "rails_admin_import", "~> 1.2"
 
-gem 'devise'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
