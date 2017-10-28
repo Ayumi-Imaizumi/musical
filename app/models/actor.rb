@@ -7,4 +7,10 @@ class Actor < ActiveRecord::Base
     .where(event_id: event_id)
     .includes(:part).first
   end
+
+  def age
+    if birthday
+      ((Time.current - birthday.to_datetime)/1.year).to_i
+    end
+  end
 end
