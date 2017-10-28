@@ -35,6 +35,18 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  config.model 'Actor' do
+    export do
+      field :id
+      field :name
+      field :furigana
+      field :sex
+      field :birthday
+      field :created_at
+      field :updated_at
+      field :recital
+    end
+  end
   config.model 'Event' do
     list do
       field :id
