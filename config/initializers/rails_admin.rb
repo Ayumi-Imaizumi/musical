@@ -56,7 +56,11 @@ RailsAdmin.config do |config|
     end
     edit do
       field :actor
-      field :event
+      field :event do
+        formatted_value do
+          bindings[:object].event
+        end
+      end
       field :part
     end
   end
