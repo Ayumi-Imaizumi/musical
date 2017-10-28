@@ -37,6 +37,7 @@ RailsAdmin.config do |config|
 
   config.model 'Event' do
     list do
+      field :id
       field :schedule_name
     end
     object_label_method do

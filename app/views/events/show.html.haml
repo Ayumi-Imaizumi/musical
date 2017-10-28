@@ -1,6 +1,7 @@
 %h1= @event.title
 %p= @event.play_at
 %p= @event.theater.name
+= image_tag "title#{@event.title.id}.jpg", width: "100"
 
 %ul
   - @event.actors.each do |actor|
