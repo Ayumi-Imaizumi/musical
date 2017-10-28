@@ -2,7 +2,7 @@
 %ul
   - @titles.each do |title|
     %li
-      = image_tag "title#{title.id}.jpg", size: "100x80"
+      = image_tag "title#{title.id}.jpg", width: "100"
       = link_to title.name, title_path(title.id)
 
 %p

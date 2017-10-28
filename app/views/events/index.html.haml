@@ -2,5 +2,5 @@
 %ul
   - @events.each do |event|
     %li
-      = image_tag "event#{event.id}.jpg", size: "100x80"
+      = image_tag "event#{event.id}.jpg", width: "100"
       = link_to event.title, event_path(event.id)
