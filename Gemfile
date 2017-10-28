@@ -21,6 +21,11 @@ group :development do
   gem 'sqlite3'
 end
 
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'pry-byebug'
+  gem 'pry-rails'
+end
 # for HEROKU
 group :production do
   gem 'pg'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318070930) do
+ActiveRecord::Schema.define(version: 20171028071636) do
 
   create_table "actor_events", force: :cascade do |t|
     t.integer  "actor_id"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20170318070930) do
     t.string   "name"
     t.string   "furigana"
     t.integer  "sex"
-    t.integer  "age"
     t.date     "birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
