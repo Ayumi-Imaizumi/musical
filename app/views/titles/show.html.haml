@@ -2,7 +2,7 @@
 %ul
   - @title.events.each do |event|
     %li
-      = event.play_at
+      = link_to event.play_at, event_path(id:event.id)
       = link_to event.theater.name, theater_path(id: event.theater.id)
       = link_to "[観劇記録を付ける]", new_viewing_log_path+"?event_id=#{event.id}"
       - if @errors[event.id]
