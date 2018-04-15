@@ -18,5 +18,10 @@ class ViewingLogsController < ApplicationController
       render "titles/show"
     end
   end
+  def destroy
+    @viewing_log = ViewingLog.find(params[:id])
+    @viewing_log.destroy
+    redirect_to viewing_logs_path
+  end
 
 end
