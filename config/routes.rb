@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   devise_for :models
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :admin_users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :events
   resources :titles
   resources :viewing_logs
