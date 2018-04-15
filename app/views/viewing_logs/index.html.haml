@@ -4,6 +4,7 @@
   - @viewing_logs.each do |log|
     %li
       = link_to log.event.schedule_name, event_path(log.event.id)
+      = link_to " [削除する]", viewing_log_path(log.id), method: :delete, data: {confirm: "本当に削除しますか？"}
       -# (#{log.event.play_at})#{log.event.theater.name}
       %ul
         - log.event.actors.each do |actor|
